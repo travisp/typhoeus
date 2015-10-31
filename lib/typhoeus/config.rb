@@ -58,5 +58,13 @@ module Typhoeus
     #
     # @see Typhoeus::Request#set_defaults
     attr_accessor :user_agent
+    
+    # Defines whether or not to skip requiring mime-types.
+    # Defaults to false for backwards compatibility reasons.
+    # Ethon reads this configuration option and, if set,
+    # skips trying to require mime-types.
+    #
+    # @ return [ Boolean ]
+    attr_accessor :omit_require_mime_types
   end
 end
